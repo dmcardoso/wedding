@@ -50,6 +50,7 @@ gulp.task('copy-build-resources', function () {
         gulp.src('./manifest.json').pipe(gulp.dest('./build')),
         gulp.src('./mstile-150x150.png').pipe(gulp.dest('./build')),
         gulp.src('./safari-pinned-tab.svg').pipe(gulp.dest('./build')),
+        gulp.src('./.nojekyll').pipe(gulp.dest('./build')),
     ])
 });
 
