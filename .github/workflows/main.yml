@@ -4,6 +4,8 @@ on:
   # Só irá rodar nas seguintes situações das seguintes branhces
   push:
     branches: [main]
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -15,7 +17,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 12
-      - run: |
+      - name: Build
+        run: |
           npm install
           npm run build
           gulp copy-build-resources
