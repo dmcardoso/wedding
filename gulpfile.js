@@ -27,32 +27,5 @@ gulp.task('minify-js', function () {
         .pipe(gulp.dest('./js'));
 });
 
-// copy build
-gulp.task('copy-build-resources', function () {
-    return merge([
-        gulp.src('./img/*')
-        .pipe(gulp.dest('./build/img')),
-        gulp.src('./css/*')
-        .pipe(gulp.dest('./build/css')),
-        gulp.src('./fonts/*')
-        .pipe(gulp.dest('./build/fonts')),
-        gulp.src('./js/*')
-        .pipe(gulp.dest('./build/js')),
-        gulp.src('./index.html')
-        .pipe(gulp.dest('./build')),
-        gulp.src('./android-chrome-192x192.png').pipe(gulp.dest('./build')),
-        gulp.src('./android-chrome-512x512.png').pipe(gulp.dest('./build')),
-        gulp.src('./apple-touch-icon.png').pipe(gulp.dest('./build')),
-        gulp.src('./browserconfig.xml').pipe(gulp.dest('./build')),
-        gulp.src('./favicon-16x16.png').pipe(gulp.dest('./build')),
-        gulp.src('./favicon-32x32.png').pipe(gulp.dest('./build')),
-        gulp.src('./favicon.ico').pipe(gulp.dest('./build')),
-        gulp.src('./manifest.json').pipe(gulp.dest('./build')),
-        gulp.src('./mstile-150x150.png').pipe(gulp.dest('./build')),
-        gulp.src('./safari-pinned-tab.svg').pipe(gulp.dest('./build')),
-        gulp.src('./.nojekyll').pipe(gulp.dest('./build')),
-    ])
-});
-
 // default task
 gulp.task('default', gulp.series('sass', 'minify-js'));

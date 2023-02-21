@@ -232,6 +232,7 @@
 
     #map-content-wrapper {
         margin-bottom: 40px;
+        min-height: 500px;
     }
     
     #map-content {
