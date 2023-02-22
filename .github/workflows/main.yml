@@ -37,6 +37,7 @@ jobs:
           cp manifest.json build/manifest.json
           cp mstile-150x150.png build/mstile-150x150.png
           cp safari-pinned-tab.svg build/safari-pinned-tab.svg
+          cp CNAME build/CNAME
       
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
