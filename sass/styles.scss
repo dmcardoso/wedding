@@ -252,8 +252,8 @@ Hero
 ========================================================================== */
 .hero {
   min-height: 750px;
-  // background: url('../img/hero-min.jpg') center center;
   background: #d1bacf;
+  background: url('../img/Cortada-2.jpg') 50% 60% no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -278,6 +278,7 @@ Hero
     font-weight: 300;
     margin-bottom: 80px;
   }
+  
   .hero-content {
     padding-top: 40%;
   }
